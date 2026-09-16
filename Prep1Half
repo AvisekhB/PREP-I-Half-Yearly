@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prep I Half Yearly Study Buddy | Calcutta Girls High School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#29B6F6;
+  --sky-dark:#0288D1;
+  --sun:#FFC93C;
+  --sun-dark:#F4A600;
+  --grass:#5FCB79;
+  --grass-dark:#2E9E4F;
+  --coral:#FF6F6F;
+  --coral-dark:#E24545;
+  --grape:#9B7EDE;
+  --grape-dark:#6E4FC0;
+  --cream:#FFFBF2;
+  --ink:#2B2540;
+  --paper:#FFFFFF;
+  --line:#EFE7D8;
+  --shadow: 6px 6px 0 rgba(43,37,64,0.10);
+  --chipbg:#FFF6DC;
+  --chipbg2:#F2EEFF;
+  --picbg:#F7FBFF;
+  --numbg:var(--grass);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Nunito', sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.55;
+  transition:background .35s ease, color .35s ease;
+}
+h1,h2,h3,h4{
+  font-family:'Baloo 2', sans-serif;
+  margin:0 0 .4em 0;
+  line-height:1.15;
+}
+p{margin:.3em 0 .8em 0;}
+img{max-width:100%;}
+a{color:inherit;}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  padding:56px 20px 30px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(255,201,60,.55) 0, rgba(255,201,60,0) 40%),
+    radial-gradient(circle at 88% 18%, rgba(95,203,121,.5) 0, rgba(95,203,121,0) 42%),
+    radial-gradient(circle at 50% 100%, rgba(155,126,222,.4) 0, rgba(155,126,222,0) 45%),
+    linear-gradient(180deg,#EAF7FF 0%, var(--cream) 85%);
+  overflow:hidden;
+  border-bottom:6px solid var(--ink);
+  transition:background .35s ease;
+}
+.hero .kite{position:absolute; font-size:38px; opacity:.9; animation:bob 4.5s ease-in-out infinite;}
+.hero .k1{top:14%; left:8%; animation-delay:0s;}
+.hero .k2{top:20%; right:10%; animation-delay:.7s;}
+.hero .k3{bottom:18%; left:14%; animation-delay:1.4s;}
+.hero .k4{bottom:12%; right:16%; animation-delay:2.1s;}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg);}50%{transform:translateY(-14px) rotate(4deg);}}
+@media (prefers-reduced-motion: reduce){.hero .kite{animation:none;}}
+
+.school-tag{
+  display:inline-block;
+  font-family:'Baloo 2';
+  font-weight:700;
+  background:var(--ink);
+  color:#fff;
+  padding:6px 18px;
+  border-radius:999px;
+  font-size:.95rem;
+  letter-spacing:.02em;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(2.1rem, 5vw, 3.4rem);
+  color:var(--ink);
+}
+.hero h1 span{color:var(--coral-dark);}
+.hero .sub{
+  font-size:1.15rem;
+  max-width:640px;
+  margin:10px auto 26px auto;
+  font-weight:700;
+  color:#5b5470;
+}
+.session-pill{
+  display:inline-flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:22px;
+}
+.session-pill span{
+  background:var(--paper);
+  border:3px solid var(--ink);
+  border-radius:14px;
+  padding:8px 16px;
+  font-weight:800;
+  font-family:'Baloo 2';
+  box-shadow:var(--shadow);
+  font-size:.95rem;
+}
+
+/* ---------- CONTROL BAR (audio / theme / print) ---------- */
+.control-bar{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  margin:0 auto 8px auto;
+  max-width:760px;
+}
+.control-btn{
+  font-family:'Baloo 2'; font-weight:700; font-size:.9rem;
+  border:3px solid var(--ink);
+  background:var(--paper);
+  color:var(--ink);
+  border-radius:999px;
+  padding:8px 16px;
+  cursor:pointer;
+  box-shadow:3px 3px 0 rgba(43,37,64,0.18);
+  transition:transform .12s ease;
+}
+.control-btn:hover, .control-btn:focus-visible{transform:translateY(-2px);}
+.control-btn:active{transform:translateY(1px);}
+
+/* ---------- PROGRESS BAR ---------- */
+.progress-wrap{
+  max-width:760px;
+  margin:0 auto 22px auto;
+  padding:0 16px;
+}
+.progress-track{
+  background:#fff;
+  border:3px solid var(--ink);
+  border-radius:999px;
+  height:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg, var(--grass), var(--sun), var(--coral), var(--grape));
+  background-size:300% 100%;
+  animation:flow 4s linear infinite;
+  transition:width .5s ease;
+}
+@keyframes flow{0%{background-position:0% 0;}100%{background-position:300% 0;}}
+.progress-label{
+  text-align:center;
+  font-family:'Baloo 2'; font-weight:700;
+  margin-top:6px;
+  font-size:.95rem;
+}
+
+/* ---------- NAV ---------- */
+.subject-nav{
+  position:sticky; top:0; z-index:50;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  background:var(--paper);
+  padding:12px 14px;
+  border-bottom:4px solid var(--ink);
+}
+.subject-nav a{
+  text-decoration:none;
+  font-family:'Baloo 2';
+  font-weight:700;
+  font-size:.9rem;
+  color:#fff;
+  padding:9px 16px;
+  border-radius:999px;
+  border:3px solid var(--ink);
+  box-shadow:3px 3px 0 rgba(43,37,64,0.18);
+  transition:transform .15s ease;
+  white-space:nowrap;
+}
+.subject-nav a:hover, .subject-nav a:focus-visible{transform:translateY(-2px);}
+.nav-eng{background:var(--sky);}
+.nav-num{background:var(--coral);}
+.nav-evs{background:var(--grass-dark);}
+.nav-rhy{background:var(--grape);}
+.nav-top{background:var(--sun-dark); color:var(--ink) !important;}
+
+/* ---------- SUBJECT SECTION ---------- */
+.subject{
+  padding:54px 16px 30px 16px;
+  scroll-margin-top:70px;
+  transition:background .35s ease;
+}
+.subject-head{
+  max-width:980px;
+  margin:0 auto 30px auto;
+  text-align:center;
+}
+.subject-badge{
+  font-size:2.6rem;
+  display:block;
+  margin-bottom:6px;
+}
+.subject-head h2{
+  font-size:clamp(1.7rem,4vw,2.5rem);
+}
+.subject-head p{
+  max-width:640px;
+  margin:6px auto 0 auto;
+  font-weight:700;
+  color:#5b5470;
+}
+.eng-theme .subject-head h2{color:var(--sky-dark);}
+.num-theme .subject-head h2{color:var(--coral-dark);}
+.evs-theme .subject-head h2{color:var(--grass-dark);}
+.rhy-theme .subject-head h2{color:var(--grape-dark);}
+
+.eng-theme{background:#EAF8FF;}
+.num-theme{background:#FFF1EC;}
+.evs-theme{background:#EEFAF0;}
+.rhy-theme{background:#F5F0FF;}
+
+.chapters{
+  max-width:1040px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+}
+
+/* ---------- CHAPTER CARD ---------- */
+.chapter{
+  background:var(--paper);
+  border:3px solid var(--ink);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:box-shadow .25s ease, background .35s ease;
+}
+.chapter.is-done{box-shadow:6px 6px 0 rgba(95,203,121,0.55);}
+.chapter-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 22px;
+  color:#fff;
+  font-family:'Baloo 2';
+}
+.eng-theme .chapter-head{background:var(--sky-dark);}
+.num-theme .chapter-head{background:var(--coral-dark);}
+.evs-theme .chapter-head{background:var(--grass-dark);}
+.rhy-theme .chapter-head{background:var(--grape-dark);}
+.chapter-num{
+  background:#fff;
+  color:var(--ink);
+  min-width:38px; height:38px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800;
+  flex-shrink:0;
+  border:3px solid var(--ink);
+}
+.chapter-head h3{font-size:1.25rem; margin:0; flex:1;}
+.star-badge{font-size:1.3rem; display:none;}
+.chapter.is-done .star-badge{display:inline;}
+.chapter-body{padding:20px 24px 8px 24px;}
+.chapter-footer{
+  padding:8px 24px 20px 24px;
+  display:flex; justify-content:flex-end;
+}
+.done-btn{
+  font-family:'Baloo 2'; font-weight:700; font-size:.9rem;
+  border:3px solid var(--ink);
+  background:var(--sun);
+  color:var(--ink);
+  border-radius:999px;
+  padding:8px 16px;
+  cursor:pointer;
+  box-shadow:3px 3px 0 rgba(43,37,64,0.18);
+}
+.chapter.is-done .done-btn{background:var(--grass); color:#fff;}
+
+.block-label{
+  display:inline-block;
+  font-family:'Baloo 2';
+  font-weight:700;
+  font-size:.85rem;
+  color:#fff;
+  padding:3px 12px;
+  border-radius:8px;
+  margin:14px 0 8px 0;
+}
+.label-learn{background:var(--sky);}
+.label-example{background:var(--sun-dark); color:var(--ink);}
+.label-practice{background:var(--coral);}
+.num-theme .label-learn{background:var(--coral);}
+.num-theme .label-example{background:var(--sun-dark);}
+.num-theme .label-practice{background:var(--grape);}
+.evs-theme .label-learn{background:var(--grass);}
+.evs-theme .label-example{background:var(--sun-dark);}
+.evs-theme .label-practice{background:var(--sky);}
+
+.audio-hint{font-size:.8rem; font-weight:700; color:#5b5470; margin:2px 0 8px 0;}
+
+.wordbank{
+  display:flex; flex-wrap:wrap; gap:8px;
+  margin:8px 0 4px 0;
+}
+.wordbank span{
+  background:var(--chipbg);
+  border:2px solid var(--sun-dark);
+  border-radius:10px;
+  padding:5px 12px;
+  font-weight:800;
+  font-family:'Baloo 2';
+  font-size:.95rem;
+  cursor:pointer;
+  user-select:none;
+}
+.wordbank span:hover{transform:translateY(-2px); filter:brightness(1.03);}
+.chip-row{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0;}
+.chip{
+  background:var(--chipbg2);
+  border:2px solid var(--grape);
+  border-radius:12px;
+  padding:8px 14px;
+  font-weight:700;
+  font-size:.95rem;
+  min-width:70px;
+  text-align:center;
+  cursor:pointer;
+}
+.pic-word{
+  display:flex; flex-direction:column; align-items:center;
+  background:var(--picbg);
+  border:2px dashed var(--sky-dark);
+  border-radius:14px;
+  padding:10px 8px;
+  min-width:74px;
+  cursor:pointer;
+}
+.pic-word.silent{cursor:default;}
+.pic-word .em{font-size:1.8rem;}
+.pic-word .wd{font-family:'Baloo 2'; font-weight:700; margin-top:4px; text-align:center;}
+.grid-3{display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:10px; margin:8px 0;}
+
+.abc-strip{
+  display:flex; flex-wrap:wrap; gap:6px; margin:8px 0;
+  font-family:'Baloo 2'; font-weight:700;
+}
+.abc-strip span{
+  background:var(--sky);
+  color:#fff;
+  border-radius:8px;
+  width:34px; height:34px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1rem;
+  cursor:pointer;
+}
+.abc-strip.small span{background:var(--sun-dark); color:var(--ink);}
+
+table.practice-table{
+  width:100%; border-collapse:collapse; margin:10px 0;
+}
+table.practice-table td, table.practice-table th{
+  border:2px solid var(--line);
+  padding:8px 10px;
+  text-align:left;
+  font-size:.95rem;
+}
+table.practice-table th{background:#FBF6E8; font-family:'Baloo 2'; color:var(--ink);}
+
+.practice-box{
+  background:#FFF9EE;
+  border:2px solid var(--sun-dark);
+  border-radius:16px;
+  padding:16px 18px;
+  margin-top:6px;
+}
+.practice-box ol{margin:6px 0 0 20px; padding:0;}
+.practice-box li{margin-bottom:10px; font-weight:700;}
+.answer-line{
+  display:inline-block;
+  border-bottom:2px dotted var(--ink);
+  min-width:110px;
+  margin-left:6px;
+}
+.numline{
+  display:flex; flex-wrap:wrap; gap:6px; font-family:'Baloo 2'; font-weight:700; margin:8px 0;
+}
+.numline span{
+  background:var(--numbg);
+  color:#fff;
+  border-radius:8px;
+  min-width:30px; height:30px;
+  display:flex; align-items:center; justify-content:center;
+  padding:0 6px;
+  cursor:pointer;
+}
+.tip{
+  background:#EFFBF0;
+  border-left:6px solid var(--grass-dark);
+  padding:10px 14px;
+  border-radius:8px;
+  margin:10px 0;
+  font-weight:700;
+}
+.rhyme-card .chapter-body{background:transparent;}
+.rhyme-text{
+  background:#F8F5FF;
+  border:2px dashed var(--grape);
+  border-radius:14px;
+  padding:14px 20px;
+  font-family:'Baloo 2';
+  font-size:1.05rem;
+  white-space:pre-line;
+}
+.play-rhyme{
+  font-family:'Baloo 2'; font-weight:700; font-size:.95rem;
+  border:3px solid var(--ink);
+  background:var(--grape);
+  color:#fff;
+  border-radius:999px;
+  padding:9px 18px;
+  cursor:pointer;
+  margin:10px 0 4px 0;
+  box-shadow:3px 3px 0 rgba(43,37,64,0.18);
+}
+footer{
+  text-align:center;
+  padding:34px 16px 46px 16px;
+  font-weight:700;
+  color:#5b5470;
+}
+.top-link{
+  display:block;
+  text-align:center;
+  margin-top:26px;
+}
+.divider-wave{
+  height:26px;
+  background:repeating-linear-gradient(-45deg, transparent 0 10px, rgba(43,37,64,.05) 10px 20px);
+}
+::selection{background:var(--sun); color:var(--ink);}
+
+/* ---------- CONFETTI ---------- */
+.confetti-piece{
+  position:fixed;
+  top:-20px;
+  z-index:999;
+  pointer-events:none;
+  font-size:1.4rem;
+  animation:fall linear forwards;
+}
+@keyframes fall{
+  to{ transform:translateY(110vh) rotate(360deg); opacity:0.9; }
+}
+
+/* ---------- FUTURE / NIGHT MODE ---------- */
+html.night{
+  --sky:#3AD6FF;
+  --sky-dark:#0FA8E0;
+  --sun:#FFE070;
+  --sun-dark:#FFC93C;
+  --grass:#4CE39A;
+  --grass-dark:#1FBF7A;
+  --coral:#FF8FA3;
+  --coral-dark:#FF5C7C;
+  --grape:#C9A8FF;
+  --grape-dark:#A57BFF;
+  --cream:#0B0B2A;
+  --ink:#F1EEFF;
+  --paper:#16143A;
+  --line:#332F63;
+  --shadow: 6px 6px 0 rgba(0,0,0,.55);
+  --chipbg:#241F4D;
+  --chipbg2:#211A4A;
+  --picbg:#141235;
+  --numbg:#2E9E4F;
+}
+html.night body{
+  background:
+    radial-gradient(1.5px 1.5px at 20px 30px, #ffffff55 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 120px 90px, #ffffff40 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 60px 160px, #ffffff35 50%, transparent 51%),
+    radial-gradient(2px 2px at 200px 40px, #ffffff45 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 250px 200px, #ffffff30 50%, transparent 51%),
+    var(--cream);
+  background-attachment:fixed;
+}
+html.night .hero{
+  background:
+    radial-gradient(circle at 12% 22%, rgba(58,214,255,.20) 0, rgba(58,214,255,0) 40%),
+    radial-gradient(circle at 88% 18%, rgba(76,227,154,.20) 0, rgba(76,227,154,0) 42%),
+    radial-gradient(circle at 50% 100%, rgba(201,168,255,.22) 0, rgba(201,168,255,0) 45%),
+    linear-gradient(180deg,#0B0B2A 0%, #12112E 85%);
+}
+html.night .eng-theme{background:#0E1A33;}
+html.night .num-theme{background:#2A1526;}
+html.night .evs-theme{background:#0E2A1E;}
+html.night .rhy-theme{background:#1B1533;}
+html.night table.practice-table th{background:#241F4D; color:var(--ink);}
+html.night .practice-box{background:#241A0E; border-color:var(--sun-dark);}
+html.night .tip{background:#0E2A1E;}
+html.night .rhyme-text{background:#1B1533;}
+html.night .kite{filter:drop-shadow(0 0 6px rgba(255,255,255,.4));}
+html.night .school-tag{background:var(--grape-dark);}
+html.night .hero h1, html.night .hero .sub, html.night .subject-head p{color:var(--ink);}
+
+@media print{
+  .subject-nav, .control-bar, .progress-wrap, .done-btn, .chapter-footer, .play-rhyme, .top-link, footer{display:none !important;}
+  .chapter{break-inside:avoid; box-shadow:none; border:2px solid #000;}
+  body{background:#fff !important;}
+  .hero{border-bottom:2px solid #000;}
+}
+</style>
+</head>
+<a id="top"></a>
+<body>
+<header class="hero">
+  <span class="kite k1">🪁</span>
+  <span class="kite k2">⭐</span>
+  <span class="kite k3">🌈</span>
+  <span class="kite k4">🎈</span>
+  <span class="school-tag">Calcutta Girls High School</span>
+  <h1>PREP I <span>Half Yearly</span> Study Buddy</h1>
+  <p class="sub">A big, bright, colourful practice book for English, Number Work, E.V.S. and Rhymes &mdash; built straight from the Session 2026&ndash;2027 syllabus. Now it talks, tracks your stars, and even has a Future Mode!</p>
+  <div class="session-pill">
+    <span>📘 Session 2026-2027</span>
+    <span>🏫 Class: Prep I</span>
+    <span>📝 Term: Half Yearly</span>
+  </div>
+  <div class="control-bar">
+    <button class="control-btn" id="theme-toggle" onclick="toggleTheme()">🚀 Future Mode</button>
+    <button class="control-btn" onclick="stopSpeak()">🔇 Stop Audio</button>
+    <button class="control-btn" onclick="window.print()">🖨️ Print Worksheet</button>
+    <button class="control-btn" onclick="resetProgress()">♻️ Reset Stars</button>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-label" id="progress-label">0 / 0 chapters done (0%)</p>
+  </div>
+</header>
+
+<nav class="subject-nav">
+  <a class="nav-eng" href="#english">🔤 English <span id="badge-english"></span></a>
+  <a class="nav-num" href="#numberwork">🔢 Number Work <span id="badge-numberwork"></span></a>
+  <a class="nav-evs" href="#evs">🌍 E.V.S. <span id="badge-evs"></span></a>
+  <a class="nav-rhy" href="#rhymes">🎵 Rhymes <span id="badge-rhymes"></span></a>
+</nav>
+
+<section id="english" class="subject eng-theme">
+  <div class="subject-head">
+    <span class="subject-badge">🔤</span>
+    <h2>English</h2>
+    <p>Half Yearly chapters: letters, words and sight-reading practice.</p>
+  </div>
+  <div class="chapters">
+
+  <article class="chapter " data-chapter-id="eng-1" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">1</span><h3>A to Z Capital Letters</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>There are <strong>26 capital (big) letters</strong> in English, from A to Z. Capital letters are used at the start of names and sentences.</p>
+<p class="audio-hint">🔊 Tap any letter below to hear it out loud.</p>
+<div class="abc-strip"><span onclick="speak("A")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear A">A</span> <span onclick="speak("B")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear B">B</span> <span onclick="speak("C")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear C">C</span> <span onclick="speak("D")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear D">D</span> <span onclick="speak("E")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear E">E</span> <span onclick="speak("F")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear F">F</span> <span onclick="speak("G")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear G">G</span> <span onclick="speak("H")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear H">H</span> <span onclick="speak("I")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear I">I</span> <span onclick="speak("J")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear J">J</span> <span onclick="speak("K")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear K">K</span> <span onclick="speak("L")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear L">L</span> <span onclick="speak("M")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear M">M</span> <span onclick="speak("N")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear N">N</span> <span onclick="speak("O")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear O">O</span> <span onclick="speak("P")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear P">P</span> <span onclick="speak("Q")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Q">Q</span> <span onclick="speak("R")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear R">R</span> <span onclick="speak("S")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear S">S</span> <span onclick="speak("T")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear T">T</span> <span onclick="speak("U")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear U">U</span> <span onclick="speak("V")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear V">V</span> <span onclick="speak("W")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear W">W</span> <span onclick="speak("X")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear X">X</span> <span onclick="speak("Y")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Y">Y</span> <span onclick="speak("Z")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Z">Z</span></div>
+<button class="control-btn" onclick='speakList(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])'>🎶 Sing the Alphabet</button>
+
+      
+<span class="block-label label-example">Example - One word for every letter</span>
+<p class="audio-hint">🔊 Tap a card to hear the letter and its word.</p>
+<div class="grid-3"><div class="pic-word" onclick="speak("A for Apple")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear A for Apple"><span class="em">🍎</span><span class="wd">A - Apple</span></div><div class="pic-word" onclick="speak("B for Ball")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear B for Ball"><span class="em">⚽</span><span class="wd">B - Ball</span></div><div class="pic-word" onclick="speak("C for Cat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear C for Cat"><span class="em">🐱</span><span class="wd">C - Cat</span></div><div class="pic-word" onclick="speak("D for Dog")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear D for Dog"><span class="em">🐶</span><span class="wd">D - Dog</span></div><div class="pic-word" onclick="speak("E for Egg")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear E for Egg"><span class="em">🥚</span><span class="wd">E - Egg</span></div><div class="pic-word" onclick="speak("F for Fish")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear F for Fish"><span class="em">🐟</span><span class="wd">F - Fish</span></div><div class="pic-word" onclick="speak("G for Grapes")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear G for Grapes"><span class="em">🍇</span><span class="wd">G - Grapes</span></div><div class="pic-word" onclick="speak("H for Hut")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear H for Hut"><span class="em">🏠</span><span class="wd">H - Hut</span></div><div class="pic-word" onclick="speak("I for Ice-cream")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear I for Ice-cream"><span class="em">🍦</span><span class="wd">I - Ice-cream</span></div><div class="pic-word" onclick="speak("J for Jar")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear J for Jar"><span class="em">🫙</span><span class="wd">J - Jar</span></div><div class="pic-word" onclick="speak("K for Key")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear K for Key"><span class="em">🔑</span><span class="wd">K - Key</span></div><div class="pic-word" onclick="speak("L for Lemon")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear L for Lemon"><span class="em">🍋</span><span class="wd">L - Lemon</span></div><div class="pic-word" onclick="speak("M for Mango")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear M for Mango"><span class="em">🥭</span><span class="wd">M - Mango</span></div><div class="pic-word" onclick="speak("N for Nest")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear N for Nest"><span class="em">🪺</span><span class="wd">N - Nest</span></div><div class="pic-word" onclick="speak("O for Orange")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear O for Orange"><span class="em">🍊</span><span class="wd">O - Orange</span></div><div class="pic-word" onclick="speak("P for Pie")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear P for Pie"><span class="em">🥧</span><span class="wd">P - Pie</span></div><div class="pic-word" onclick="speak("Q for Queen")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Q for Queen"><span class="em">👸</span><span class="wd">Q - Queen</span></div><div class="pic-word" onclick="speak("R for Rose")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear R for Rose"><span class="em">🌹</span><span class="wd">R - Rose</span></div><div class="pic-word" onclick="speak("S for Sun")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear S for Sun"><span class="em">☀️</span><span class="wd">S - Sun</span></div><div class="pic-word" onclick="speak("T for Tree")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear T for Tree"><span class="em">🌳</span><span class="wd">T - Tree</span></div><div class="pic-word" onclick="speak("U for Umbrella")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear U for Umbrella"><span class="em">☂️</span><span class="wd">U - Umbrella</span></div><div class="pic-word" onclick="speak("V for Violin")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear V for Violin"><span class="em">🎻</span><span class="wd">V - Violin</span></div><div class="pic-word" onclick="speak("W for Watch")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear W for Watch"><span class="em">👀</span><span class="wd">W - Watch</span></div><div class="pic-word" onclick="speak("X for Box")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear X for Box"><span class="em">📦</span><span class="wd">X - Box</span></div><div class="pic-word" onclick="speak("Y for Yo-yo")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Y for Yo-yo"><span class="em">🪀</span><span class="wd">Y - Yo-yo</span></div><div class="pic-word" onclick="speak("Z for Zebra")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Z for Zebra"><span class="em">🦓</span><span class="wd">Z - Zebra</span></div></div>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write the capital letters from A to Z on a ruled page (3 rows).</li>
+    <li>Colour the letter <strong>A</strong> red, <strong>B</strong> blue and <strong>C</strong> green in your workbook.</li>
+    <li>Circle the correct capital letter: (a, <strong>B</strong>, c) &nbsp; is the capital letter <span class="answer-line"></span></li>
+    <li>Which letter comes after <strong>D</strong>? <span class="answer-line"></span></li>
+    <li>Which letter comes before <strong>M</strong>? <span class="answer-line"></span></li>
+    <li>Join the dots to make the letters <strong>S, T, U, V</strong> and say them aloud.</li>
+    <li>Say the alphabet from A to Z without looking, three times.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-1', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-2" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">2</span><h3>a-z Small Letters</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Every capital letter has a matching <strong>small (lower-case) letter</strong>. Small letters are used inside words.</p>
+<p class="audio-hint">🔊 Tap any small letter to hear it.</p>
+<div class="abc-strip small"><span onclick="speak("a")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear a">a</span> <span onclick="speak("b")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear b">b</span> <span onclick="speak("c")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear c">c</span> <span onclick="speak("d")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear d">d</span> <span onclick="speak("e")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear e">e</span> <span onclick="speak("f")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear f">f</span> <span onclick="speak("g")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear g">g</span> <span onclick="speak("h")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear h">h</span> <span onclick="speak("i")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear i">i</span> <span onclick="speak("j")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear j">j</span> <span onclick="speak("k")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear k">k</span> <span onclick="speak("l")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear l">l</span> <span onclick="speak("m")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear m">m</span> <span onclick="speak("n")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear n">n</span> <span onclick="speak("o")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear o">o</span> <span onclick="speak("p")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear p">p</span> <span onclick="speak("q")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear q">q</span> <span onclick="speak("r")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear r">r</span> <span onclick="speak("s")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear s">s</span> <span onclick="speak("t")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear t">t</span> <span onclick="speak("u")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear u">u</span> <span onclick="speak("v")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear v">v</span> <span onclick="speak("w")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear w">w</span> <span onclick="speak("x")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear x">x</span> <span onclick="speak("y")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear y">y</span> <span onclick="speak("z")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear z">z</span></div>
+
+      
+<span class="block-label label-example">Example - Capital and small pairs</span>
+<div class="chip-row"><div class="chip" onclick="speak("A a")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear A a">Aa</div><div class="chip" onclick="speak("B b")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear B b">Bb</div><div class="chip" onclick="speak("C c")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear C c">Cc</div><div class="chip" onclick="speak("D d")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear D d">Dd</div><div class="chip" onclick="speak("E e")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear E e">Ee</div><div class="chip" onclick="speak("F f")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear F f">Ff</div><div class="chip" onclick="speak("G g")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear G g">Gg</div><div class="chip" onclick="speak("H h")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear H h">Hh</div><div class="chip" onclick="speak("I i")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear I i">Ii</div><div class="chip" onclick="speak("J j")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear J j">Jj</div><div class="chip" onclick="speak("K k")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear K k">Kk</div><div class="chip" onclick="speak("L l")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear L l">Ll</div><div class="chip" onclick="speak("M m")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear M m">Mm</div></div>
+<div class="chip-row"><div class="chip" onclick="speak("N n")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear N n">Nn</div><div class="chip" onclick="speak("O o")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear O o">Oo</div><div class="chip" onclick="speak("P p")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear P p">Pp</div><div class="chip" onclick="speak("Q q")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Q q">Qq</div><div class="chip" onclick="speak("R r")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear R r">Rr</div><div class="chip" onclick="speak("S s")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear S s">Ss</div><div class="chip" onclick="speak("T t")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear T t">Tt</div><div class="chip" onclick="speak("U u")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear U u">Uu</div><div class="chip" onclick="speak("V v")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear V v">Vv</div><div class="chip" onclick="speak("W w")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear W w">Ww</div><div class="chip" onclick="speak("X x")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear X x">Xx</div><div class="chip" onclick="speak("Y y")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Y y">Yy</div><div class="chip" onclick="speak("Z z")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Z z">Zz</div></div>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write the small letters from a to z on a ruled page (3 rows).</li>
+    <li>Match the capital letter to its small letter: F &rarr; <span class="answer-line"></span>, R &rarr; <span class="answer-line"></span>, N &rarr; <span class="answer-line"></span></li>
+    <li>Fill in the missing small letter: a, b, __, d, e</li>
+    <li>Fill in the missing small letter: m, __, o, p, q</li>
+    <li>Write the small letter that comes after <strong>g</strong>: <span class="answer-line"></span></li>
+    <li>Circle all the small letters in this line: <strong>K p T e W n</strong></li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-2', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-3" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">3</span><h3>Two Letter Words</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Two letter words are small words made of only two letters. Reading these words builds confidence in reading sentences.</p>
+<p class="audio-hint">🔊 Tap a word to hear it, or play them all together.</p>
+<div class="wordbank"><span onclick="speak("am")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear am">am</span><span onclick="speak("an")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear an">an</span><span onclick="speak("as")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear as">as</span><span onclick="speak("at")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear at">at</span><span onclick="speak("in")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear in">in</span><span onclick="speak("is")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear is">is</span><span onclick="speak("it")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear it">it</span><span onclick="speak("if")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear if">if</span><span onclick="speak("of")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear of">of</span><span onclick="speak("on")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear on">on</span><span onclick="speak("or")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear or">or</span><span onclick="speak("up")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear up">up</span><span onclick="speak("us")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear us">us</span><span onclick="speak("be")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear be">be</span><span onclick="speak("he")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear he">he</span><span onclick="speak("me")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear me">me</span><span onclick="speak("we")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear we">we</span><span onclick="speak("go")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear go">go</span><span onclick="speak("no")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear no">no</span><span onclick="speak("so")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear so">so</span><span onclick="speak("my")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear my">my</span><span onclick="speak("by")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear by">by</span><span onclick="speak("do")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear do">do</span></div>
+<button class="control-btn" onclick='speakList(["am", "an", "as", "at", "in", "is", "it", "if", "of", "on", "or", "up", "us", "be", "he", "me", "we", "go", "no", "so", "my", "by", "do"])'>🔊 Read All Words</button>
+
+      
+<span class="block-label label-example">Example - Using two letter words in a sentence</span>
+<table class="practice-table">
+<tr><th>Word</th><th>Used in a sentence</th></tr>
+<tr><td>am</td><td>I <strong>am</strong> a good girl.</td></tr>
+<tr><td>is</td><td>This <strong>is</strong> my bag.</td></tr>
+<tr><td>go</td><td>Let us <strong>go</strong> to school.</td></tr>
+<tr><td>up</td><td>Stand <strong>up</strong>, please.</td></tr>
+<tr><td>we</td><td><strong>We</strong> like to sing.</td></tr>
+</table>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Read aloud all 23 two letter words to your parent/teacher.</li>
+    <li>Write any five two letter words: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Fill in the blank with the correct two letter word (am / is / on): The cat ____ the mat.</li>
+    <li>Fill in the blank: I ____ happy today. (am / at)</li>
+    <li>Make your own sentence using the word <strong>"we"</strong>.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-3', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-4" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">4</span><h3>Three Letter Words (a, e, i, o, u)</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Three letter words follow a <strong>Consonant-Vowel-Consonant</strong> pattern. The middle letter is always a vowel: a, e, i, o or u.</p>
+<p class="audio-hint">🔊 Tap any word, or press Play to hear the whole group.</p>
+<p><strong>Middle sound "a":</strong> <button class="control-btn" style="padding:4px 10px;font-size:.8rem;" onclick='speakList(["cat", "bat", "hat", "mat", "rat", "map", "cap", "fan"])'>🔊 Play</button></p><div class="wordbank"><span onclick="speak("cat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear cat">cat</span><span onclick="speak("bat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear bat">bat</span><span onclick="speak("hat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hat">hat</span><span onclick="speak("mat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear mat">mat</span><span onclick="speak("rat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear rat">rat</span><span onclick="speak("map")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear map">map</span><span onclick="speak("cap")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear cap">cap</span><span onclick="speak("fan")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear fan">fan</span></div><p><strong>Middle sound "e":</strong> <button class="control-btn" style="padding:4px 10px;font-size:.8rem;" onclick='speakList(["hen", "pen", "ten", "bed", "red", "leg", "net", "web"])'>🔊 Play</button></p><div class="wordbank"><span onclick="speak("hen")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hen">hen</span><span onclick="speak("pen")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear pen">pen</span><span onclick="speak("ten")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear ten">ten</span><span onclick="speak("bed")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear bed">bed</span><span onclick="speak("red")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear red">red</span><span onclick="speak("leg")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear leg">leg</span><span onclick="speak("net")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear net">net</span><span onclick="speak("web")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear web">web</span></div><p><strong>Middle sound "i":</strong> <button class="control-btn" style="padding:4px 10px;font-size:.8rem;" onclick='speakList(["pig", "big", "sit", "hit", "pin", "win", "fig", "lid"])'>🔊 Play</button></p><div class="wordbank"><span onclick="speak("pig")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear pig">pig</span><span onclick="speak("big")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear big">big</span><span onclick="speak("sit")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear sit">sit</span><span onclick="speak("hit")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hit">hit</span><span onclick="speak("pin")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear pin">pin</span><span onclick="speak("win")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear win">win</span><span onclick="speak("fig")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear fig">fig</span><span onclick="speak("lid")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear lid">lid</span></div><p><strong>Middle sound "o":</strong> <button class="control-btn" style="padding:4px 10px;font-size:.8rem;" onclick='speakList(["dog", "hot", "pot", "top", "box", "fox", "mop", "log"])'>🔊 Play</button></p><div class="wordbank"><span onclick="speak("dog")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear dog">dog</span><span onclick="speak("hot")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hot">hot</span><span onclick="speak("pot")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear pot">pot</span><span onclick="speak("top")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear top">top</span><span onclick="speak("box")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear box">box</span><span onclick="speak("fox")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear fox">fox</span><span onclick="speak("mop")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear mop">mop</span><span onclick="speak("log")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear log">log</span></div><p><strong>Middle sound "u":</strong> <button class="control-btn" style="padding:4px 10px;font-size:.8rem;" onclick='speakList(["bus", "cup", "sun", "run", "cut", "hut", "mud", "bun"])'>🔊 Play</button></p><div class="wordbank"><span onclick="speak("bus")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear bus">bus</span><span onclick="speak("cup")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear cup">cup</span><span onclick="speak("sun")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear sun">sun</span><span onclick="speak("run")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear run">run</span><span onclick="speak("cut")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear cut">cut</span><span onclick="speak("hut")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hut">hut</span><span onclick="speak("mud")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear mud">mud</span><span onclick="speak("bun")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear bun">bun</span></div>
+
+      
+<span class="block-label label-example">Example - Picture clue words</span>
+<div class="grid-3">
+  <div class="pic-word" onclick="speak("cat")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear cat"><span class="em">🐱</span><span class="wd">cat</span></div>
+  <div class="pic-word" onclick="speak("hen")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear hen"><span class="em">🐔</span><span class="wd">hen</span></div>
+  <div class="pic-word" onclick="speak("pig")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear pig"><span class="em">🐷</span><span class="wd">pig</span></div>
+  <div class="pic-word" onclick="speak("dog")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear dog"><span class="em">🐕</span><span class="wd">dog</span></div>
+  <div class="pic-word" onclick="speak("bus")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear bus"><span class="em">🚌</span><span class="wd">bus</span></div>
+</div>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write three words with the vowel "a" in the middle: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Write three words with the vowel "o" in the middle: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Sound out and read: c-a-t, h-e-n, p-i-g, d-o-g, s-u-n</li>
+    <li>Make a sentence using the word <strong>"sun"</strong>.</li>
+    <li>Underline the vowel in each word: bat, pen, win, hot, cup</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-4', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-5" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">5</span><h3>Missing Letters in Three Letter Words</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Practise filling in the missing letter (first, middle or last) to complete a three letter word. Say the word slowly, sound by sound, to find the missing letter.</p>
+
+      
+<span class="block-label label-example">Example</span>
+<table class="practice-table">
+<tr><th>Word with a gap</th><th>Missing letter</th><th>Complete word</th></tr>
+<tr><td>c _ t</td><td>a</td><td>cat</td></tr>
+<tr><td>d _ g</td><td>o</td><td>dog</td></tr>
+<tr><td>h e _</td><td>n</td><td>hen</td></tr>
+<tr><td>_ u n</td><td>s</td><td>sun</td></tr>
+</table>
+
+      
+<span class="block-label label-practice">Practice Set - Fill in the missing letter</span>
+<div class="practice-box">
+  <ol>
+    <li>b _ g (bag) &rarr; missing letter: <span class="answer-line"></span></li>
+    <li>p _ n (pen) &rarr; missing letter: <span class="answer-line"></span></li>
+    <li>t _ p (top) &rarr; missing letter: <span class="answer-line"></span></li>
+    <li>c u _ (cup) &rarr; missing letter: <span class="answer-line"></span></li>
+    <li>_ i g (pig) &rarr; missing letter: <span class="answer-line"></span></li>
+    <li>r _ t (rat) &rarr; missing letter: <span class="answer-line"></span></li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-5', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-6" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">6</span><h3>Identify the Pictures (Three Letter Words)</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Look carefully at a picture, say the name of the object, and write down the three letter word that names it.</p>
+
+      
+<span class="block-label label-example">Example - Say the picture name aloud</span>
+<div class="grid-3"><div class="pic-word silent"><span class="em">🐱</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🐕</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🌞</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🎩</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🪵</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🖊️</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🐷</span><span class="wd">?</span></div><div class="pic-word silent"><span class="em">🪣</span><span class="wd">?</span></div></div>
+<p style="font-size:.9rem;color:#5b5470;">(Answers: cat, dog, sun, hat, log, pen, pig, tub &mdash; no peeking with audio, guess first!)</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Look at each picture above and write the correct three letter word under it in your notebook.</li>
+    <li>Draw a picture for the word "bus" and write the word next to it.</li>
+    <li>Draw a picture for the word "hen" and write the word next to it.</li>
+    <li>Choose any three pictures and use each word in a small sentence.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-6', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-7" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">7</span><h3>Match the Pictures (Three Letter Words)</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>In this exercise, a set of pictures is drawn on one side and the matching words are written on the other side, all mixed up. Draw a line from each picture to its correct word.</p>
+
+      
+<span class="block-label label-example">Example - Match Column A with Column B</span>
+<table class="practice-table">
+<tr><th>Column A (Picture)</th><th>Column B (Word)</th></tr>
+<tr><td>🐱</td><td>pig</td></tr>
+<tr><td>🐷</td><td>cat</td></tr>
+<tr><td>🌞</td><td>bed</td></tr>
+<tr><td>🛏️</td><td>sun</td></tr>
+</table>
+<p style="font-size:.9rem;color:#5b5470;">(Correct matches: 🐱&rarr;cat, 🐷&rarr;pig, 🌞&rarr;sun, 🛏️&rarr;bed)</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Match: 🐔 hen &nbsp;&nbsp; 🚌 &nbsp;&nbsp; 🐟 fin &nbsp;&nbsp; 🪵 log — draw lines to the correct pictures.</li>
+    <li>Match: 🥛 cup &nbsp;&nbsp; 🎩 hat &nbsp;&nbsp; 🐭 rat — draw lines to the correct pictures.</li>
+    <li>Make your own matching set with 4 pictures and 4 three letter words for a friend to solve.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-7', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="eng-8" data-section="english">
+    <div class="chapter-head"><span class="chapter-num">8</span><h3>Sight Words</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Sight words are common words that a child should recognise <strong>instantly by sight</strong>, without sounding them out. Reading these words fast helps a child read sentences smoothly.</p>
+<p class="audio-hint">🔊 Tap a word to hear it, or play the full list.</p>
+<div class="wordbank"><span onclick="speak("a")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear a">a</span><span onclick="speak("and")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear and">and</span><span onclick="speak("away")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear away">away</span><span onclick="speak("big")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear big">big</span><span onclick="speak("blue")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear blue">blue</span><span onclick="speak("can")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear can">can</span><span onclick="speak("come")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear come">come</span><span onclick="speak("down")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear down">down</span><span onclick="speak("find")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear find">find</span><span onclick="speak("for")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear for">for</span><span onclick="speak("funny")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear funny">funny</span><span onclick="speak("go")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear go">go</span><span onclick="speak("help")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear help">help</span><span onclick="speak("here")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear here">here</span><span onclick="speak("I")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear I">I</span><span onclick="speak("in")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear in">in</span><span onclick="speak("is")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear is">is</span><span onclick="speak("it")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear it">it</span><span onclick="speak("jump")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear jump">jump</span><span onclick="speak("little")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear little">little</span><span onclick="speak("look")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear look">look</span><span onclick="speak("make")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear make">make</span><span onclick="speak("me")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear me">me</span><span onclick="speak("my")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear my">my</span><span onclick="speak("not")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear not">not</span><span onclick="speak("one")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear one">one</span><span onclick="speak("play")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear play">play</span><span onclick="speak("red")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear red">red</span><span onclick="speak("run")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear run">run</span><span onclick="speak("said")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear said">said</span><span onclick="speak("see")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear see">see</span><span onclick="speak("the")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear the">the</span><span onclick="speak("three")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear three">three</span><span onclick="speak("to")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear to">to</span><span onclick="speak("two")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear two">two</span><span onclick="speak("up")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear up">up</span><span onclick="speak("we")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear we">we</span><span onclick="speak("where")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear where">where</span><span onclick="speak("yellow")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear yellow">yellow</span><span onclick="speak("you")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear you">you</span></div>
+<button class="control-btn" onclick='speakList(["a", "and", "away", "big", "blue", "can", "come", "down", "find", "for", "funny", "go", "help", "here", "I", "in", "is", "it", "jump", "little", "look", "make", "me", "my", "not", "one", "play", "red", "run", "said", "see", "the", "three", "to", "two", "up", "we", "where", "yellow", "you"])'>🔊 Read All 40 Sight Words</button>
+
+      
+<span class="block-label label-example">Example - Sight words in a sentence</span>
+<table class="practice-table">
+<tr><th>Sight word</th><th>Sentence</th></tr>
+<tr><td>the</td><td><strong>The</strong> sun is yellow.</td></tr>
+<tr><td>little</td><td>I have a <strong>little</strong> dog.</td></tr>
+<tr><td>look</td><td><strong>Look</strong> at the blue sky.</td></tr>
+<tr><td>where</td><td><strong>Where</strong> is my ball?</td></tr>
+</table>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Read all 40 sight words aloud, five words at a time, every day.</li>
+    <li>Write any six sight words from memory: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Fill in the blank using a sight word: ____ you like to play? (Do/where)</li>
+    <li>Fill in the blank: I can ____ a rabbit. (see / not)</li>
+    <li>Underline the sight words in this sentence: "I can see a little red ball."</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('eng-8', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  </div>
+  <a class="top-link" href="#top">⬆ Back to top</a>
+</section>
+<div class="divider-wave"></div>
+
+<section id="numberwork" class="subject num-theme">
+  <div class="subject-head">
+    <span class="subject-badge">🔢</span>
+    <h2>Number Work</h2>
+    <p>Half Yearly chapters: counting, ordering and number names.</p>
+  </div>
+  <div class="chapters">
+
+  <article class="chapter " data-chapter-id="num-1" data-section="numberwork">
+    <div class="chapter-head"><span class="chapter-num">1</span><h3>1 to 50 Written Numbers</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Numbers help us count objects around us. Practise reading and writing numbers in order from 1 to 50.</p>
+<p class="audio-hint">🔊 Tap any number to hear its name.</p>
+<div class="numline"><span onclick="speak("1")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 1">1</span> <span onclick="speak("2")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 2">2</span> <span onclick="speak("3")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 3">3</span> <span onclick="speak("4")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 4">4</span> <span onclick="speak("5")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 5">5</span> <span onclick="speak("6")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 6">6</span> <span onclick="speak("7")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 7">7</span> <span onclick="speak("8")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 8">8</span> <span onclick="speak("9")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 9">9</span> <span onclick="speak("10")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 10">10</span> <span onclick="speak("11")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 11">11</span> <span onclick="speak("12")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 12">12</span> <span onclick="speak("13")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 13">13</span> <span onclick="speak("14")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 14">14</span> <span onclick="speak("15")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 15">15</span> <span onclick="speak("16")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 16">16</span> <span onclick="speak("17")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 17">17</span> <span onclick="speak("18")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 18">18</span> <span onclick="speak("19")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 19">19</span> <span onclick="speak("20")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 20">20</span> <span onclick="speak("21")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 21">21</span> <span onclick="speak("22")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 22">22</span> <span onclick="speak("23")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 23">23</span> <span onclick="speak("24")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 24">24</span> <span onclick="speak("25")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 25">25</span></div>
+<div class="numline"><span onclick="speak("26")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 26">26</span> <span onclick="speak("27")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 27">27</span> <span onclick="speak("28")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 28">28</span> <span onclick="speak("29")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 29">29</span> <span onclick="speak("30")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 30">30</span> <span onclick="speak("31")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 31">31</span> <span onclick="speak("32")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 32">32</span> <span onclick="speak("33")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 33">33</span> <span onclick="speak("34")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 34">34</span> <span onclick="speak("35")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 35">35</span> <span onclick="speak("36")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 36">36</span> <span onclick="speak("37")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 37">37</span> <span onclick="speak("38")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 38">38</span> <span onclick="speak("39")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 39">39</span> <span onclick="speak("40")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 40">40</span> <span onclick="speak("41")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 41">41</span> <span onclick="speak("42")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 42">42</span> <span onclick="speak("43")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 43">43</span> <span onclick="speak("44")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 44">44</span> <span onclick="speak("45")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 45">45</span> <span onclick="speak("46")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 46">46</span> <span onclick="speak("47")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 47">47</span> <span onclick="speak("48")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 48">48</span> <span onclick="speak("49")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 49">49</span> <span onclick="speak("50")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 50">50</span></div>
+<button class="control-btn" onclick='speakList(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50"])'>🔊 Count from 1 to 50</button>
+
+      
+<span class="block-label label-example">Example - Counting objects</span>
+<p>🍎🍎🍎 = 3 apples &nbsp;&nbsp;|&nbsp;&nbsp; ⭐⭐⭐⭐⭐⭐⭐ = 7 stars &nbsp;&nbsp;|&nbsp;&nbsp; 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈 = 10 balloons</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write numbers from 1 to 50 in a number-work notebook, five in a row.</li>
+    <li>Count the dots and write the number: •••••••• &rarr; <span class="answer-line"></span></li>
+    <li>Write the number that comes just after 27: <span class="answer-line"></span></li>
+    <li>Write the number that comes just before 41: <span class="answer-line"></span></li>
+    <li>Circle the biggest number: 14, 41, 19, 9</li>
+    <li>Colour every number that has a "3" in it, from 1 to 50.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('num-1', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="num-2" data-section="numberwork">
+    <div class="chapter-head"><span class="chapter-num">2</span><h3>Backward Counting 30 - 1</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Backward counting means counting from a bigger number down to a smaller number. Practise counting from 30 down to 1.</p>
+<p class="audio-hint">🔊 Tap a number, or launch the countdown!</p>
+<div class="numline"><span onclick="speak("30")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 30">30</span> <span onclick="speak("29")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 29">29</span> <span onclick="speak("28")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 28">28</span> <span onclick="speak("27")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 27">27</span> <span onclick="speak("26")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 26">26</span> <span onclick="speak("25")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 25">25</span> <span onclick="speak("24")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 24">24</span> <span onclick="speak("23")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 23">23</span> <span onclick="speak("22")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 22">22</span> <span onclick="speak("21")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 21">21</span> <span onclick="speak("20")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 20">20</span> <span onclick="speak("19")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 19">19</span> <span onclick="speak("18")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 18">18</span> <span onclick="speak("17")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 17">17</span> <span onclick="speak("16")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 16">16</span> <span onclick="speak("15")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 15">15</span> <span onclick="speak("14")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 14">14</span> <span onclick="speak("13")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 13">13</span> <span onclick="speak("12")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 12">12</span> <span onclick="speak("11")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 11">11</span> <span onclick="speak("10")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 10">10</span> <span onclick="speak("9")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 9">9</span> <span onclick="speak("8")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 8">8</span> <span onclick="speak("7")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 7">7</span> <span onclick="speak("6")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 6">6</span> <span onclick="speak("5")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 5">5</span> <span onclick="speak("4")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 4">4</span> <span onclick="speak("3")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 3">3</span> <span onclick="speak("2")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 2">2</span> <span onclick="speak("1")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear 1">1</span></div>
+<button class="control-btn" onclick='speakList(["30", "29", "28", "27", "26", "25", "24", "23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "Blast off!"])'>🚀 Play Countdown</button>
+
+      
+<span class="block-label label-example">Example</span>
+<p>30, 29, 28, 27, 26 ... and so on, all the way down to 1.</p>
+<p>Think of a rocket launch: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, Blast off! 🚀</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Count backward loudly from 30 to 1 without help.</li>
+    <li>Write the missing numbers: 20, 19, __, 17, __, 15</li>
+    <li>Write the missing numbers: 10, __, 8, __, 6, 5</li>
+    <li>What number comes right after 15 while counting backward (i.e. the next smaller number)? <span class="answer-line"></span></li>
+    <li>Write the backward counting from 15 to 1 in your notebook.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('num-2', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="num-3" data-section="numberwork">
+    <div class="chapter-head"><span class="chapter-num">3</span><h3>What Comes Before and After (till 50)</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>The number that comes <strong>before</strong> is one less, and the number that comes <strong>after</strong> is one more than the given number. We can also find the number that comes <strong>between</strong> two numbers.</p>
+
+      
+<span class="block-label label-example">Example</span>
+<table class="practice-table">
+<tr><th>Before</th><th>Number</th><th>After</th></tr>
+<tr><td>13</td><td>14</td><td>15</td></tr>
+<tr><td>29</td><td>30</td><td>31</td></tr>
+<tr><td>44</td><td>45</td><td>46</td></tr>
+</table>
+<p><strong>Between:</strong> the number between 22 and 24 is 23.</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>What comes before 20? <span class="answer-line"></span></li>
+    <li>What comes after 35? <span class="answer-line"></span></li>
+    <li>What comes before 50? <span class="answer-line"></span></li>
+    <li>What comes between 17 and 19? <span class="answer-line"></span></li>
+    <li>What comes after 9? <span class="answer-line"></span></li>
+    <li>Fill in the table: Before __ , Number 40, After __</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('num-3', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="num-4" data-section="numberwork">
+    <div class="chapter-head"><span class="chapter-num">4</span><h3>Number Names (1 to 20)</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Every number also has a name, written in words. Learning number names helps in reading and writing numbers correctly.</p>
+<p class="audio-hint">🔊 Play all the number names in order.</p>
+<table class="practice-table"><tr><th>Numeral</th><th>Number Name</th></tr><tr><td>1</td><td>One</td></tr><tr><td>2</td><td>Two</td></tr><tr><td>3</td><td>Three</td></tr><tr><td>4</td><td>Four</td></tr><tr><td>5</td><td>Five</td></tr><tr><td>6</td><td>Six</td></tr><tr><td>7</td><td>Seven</td></tr><tr><td>8</td><td>Eight</td></tr><tr><td>9</td><td>Nine</td></tr><tr><td>10</td><td>Ten</td></tr><tr><td>11</td><td>Eleven</td></tr><tr><td>12</td><td>Twelve</td></tr><tr><td>13</td><td>Thirteen</td></tr><tr><td>14</td><td>Fourteen</td></tr><tr><td>15</td><td>Fifteen</td></tr><tr><td>16</td><td>Sixteen</td></tr><tr><td>17</td><td>Seventeen</td></tr><tr><td>18</td><td>Eighteen</td></tr><tr><td>19</td><td>Nineteen</td></tr><tr><td>20</td><td>Twenty</td></tr></table>
+<button class="control-btn" onclick='speakList(["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"])'>🔊 Read Number Names 1-20</button>
+
+      
+<span class="block-label label-example">Example</span>
+<p>5 is written as <strong>Five</strong>. 12 is written as <strong>Twelve</strong>. 18 is written as <strong>Eighteen</strong>.</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write the number names from One to Twenty in your notebook.</li>
+    <li>Write the number name for 7: <span class="answer-line"></span></li>
+    <li>Write the number name for 16: <span class="answer-line"></span></li>
+    <li>Write the numeral for "Fourteen": <span class="answer-line"></span></li>
+    <li>Write the numeral for "Nineteen": <span class="answer-line"></span></li>
+    <li>Match: Eleven &rarr; 11, Twenty &rarr; 20, Nine &rarr; 9 (copy and complete three more on your own)</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('num-4', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  </div>
+  <a class="top-link" href="#top">⬆ Back to top</a>
+</section>
+<div class="divider-wave"></div>
+
+<section id="evs" class="subject evs-theme">
+  <div class="subject-head">
+    <span class="subject-badge">🌍</span>
+    <h2>E.V.S. (Environmental Studies)</h2>
+    <p>Half Yearly chapters: myself, family, home and the world around us.</p>
+  </div>
+  <div class="chapters">
+
+  <article class="chapter " data-chapter-id="evs-1" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">1</span><h3>Myself</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Every child is special. We learn to say our name, age, gender, school name and the things we like or dislike.</p>
+<ul>
+<li><strong>My name</strong> is what people call me.</li>
+<li><strong>My age</strong> is how many years old I am.</li>
+<li>I am a <strong>boy</strong> or a <strong>girl</strong>.</li>
+<li>I like some foods, games and colours, and I dislike others.</li>
+</ul>
+
+      
+<span class="block-label label-example">Example - About me</span>
+<div class="tip">My name is Anaya. I am 5 years old. I am a girl. I study in Calcutta Girls High School. I like mangoes and I like to play with my doll.</div>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write your name: <span class="answer-line"></span></li>
+    <li>Write your age: <span class="answer-line"></span></li>
+    <li>Write the name of your school: <span class="answer-line"></span></li>
+    <li>Write one food you like: <span class="answer-line"></span></li>
+    <li>Write one colour you like: <span class="answer-line"></span></li>
+    <li>Draw a picture of yourself in your notebook and colour it neatly.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-1', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="evs-2" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">2</span><h3>My Family</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>A family is a group of people who live together and love and take care of each other.</p>
+<div class="wordbank"><span onclick="speak("Father")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Father">Father</span><span onclick="speak("Mother")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Mother">Mother</span><span onclick="speak("Brother")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Brother">Brother</span><span onclick="speak("Sister")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Sister">Sister</span><span onclick="speak("Grandfather")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Grandfather">Grandfather</span><span onclick="speak("Grandmother")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Grandmother">Grandmother</span><span onclick="speak("Baby")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Baby">Baby</span></div>
+<p>A family with few members (parents and 1-2 children) is called a <strong>small family</strong>. A family with grandparents, uncles, aunts and cousins living together is called a <strong>joint family</strong>.</p>
+
+      
+<span class="block-label label-example">Example - My family members</span>
+<div class="tip">My father's name is Mr. Sharma. My mother's name is Mrs. Sharma. I have one younger brother. We are a small family of four members.</div>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Write your father's name: <span class="answer-line"></span></li>
+    <li>Write your mother's name: <span class="answer-line"></span></li>
+    <li>How many members are there in your family? <span class="answer-line"></span></li>
+    <li>Is your family a small family or a joint family? <span class="answer-line"></span></li>
+    <li>Draw your family and write each member's name below their picture.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-2', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="evs-3" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">3</span><h3>My House</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>A house is a place where we live with our family. Different rooms in a house are used for different purposes.</p>
+<table class="practice-table">
+<tr><th>Room</th><th>What we do there</th></tr>
+<tr><td>Bedroom</td><td>We sleep and rest</td></tr>
+<tr><td>Kitchen</td><td>We cook food</td></tr>
+<tr><td>Bathroom</td><td>We bathe and brush our teeth</td></tr>
+<tr><td>Living room</td><td>We sit together and meet guests</td></tr>
+<tr><td>Dining room</td><td>We eat our meals</td></tr>
+</table>
+
+      
+<span class="block-label label-example">Example</span>
+<p>We cook food in the <strong>kitchen</strong>. We sleep in the <strong>bedroom</strong>. We eat food in the <strong>dining room</strong>.</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Name the room where you sleep: <span class="answer-line"></span></li>
+    <li>Name the room where food is cooked: <span class="answer-line"></span></li>
+    <li>Fill in the blank: We bathe in the ____.</li>
+    <li>Fill in the blank: We eat our meals in the ____.</li>
+    <li>Draw your house and label two rooms in it.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-3', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="evs-4" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">4</span><h3>Body Parts</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Our body has many parts, and each part helps us do something different every day.</p>
+<p class="audio-hint">🔊 Tap a body part to hear its name.</p>
+<div class="grid-3"><div class="pic-word" onclick="speak("Head")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Head"><span class="em">👤</span><span class="wd">Head</span></div><div class="pic-word" onclick="speak("Eyes")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Eyes"><span class="em">👀</span><span class="wd">Eyes</span></div><div class="pic-word" onclick="speak("Ears")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Ears"><span class="em">👂</span><span class="wd">Ears</span></div><div class="pic-word" onclick="speak("Nose")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Nose"><span class="em">👃</span><span class="wd">Nose</span></div><div class="pic-word" onclick="speak("Mouth")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Mouth"><span class="em">👄</span><span class="wd">Mouth</span></div><div class="pic-word" onclick="speak("Hands")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Hands"><span class="em">🤲</span><span class="wd">Hands</span></div><div class="pic-word" onclick="speak("Legs")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Legs"><span class="em">🦵</span><span class="wd">Legs</span></div><div class="pic-word" onclick="speak("Fingers")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Fingers"><span class="em">🖐️</span><span class="wd">Fingers</span></div><div class="pic-word" onclick="speak("Hair")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Hair"><span class="em">💇</span><span class="wd">Hair</span></div><div class="pic-word" onclick="speak("Teeth")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Teeth"><span class="em">🦷</span><span class="wd">Teeth</span></div></div>
+
+      
+<span class="block-label label-example">Example - What each part does</span>
+<table class="practice-table">
+<tr><th>Body Part</th><th>Its work</th></tr>
+<tr><td>Eyes</td><td>Help us see</td></tr>
+<tr><td>Ears</td><td>Help us hear</td></tr>
+<tr><td>Nose</td><td>Helps us smell</td></tr>
+<tr><td>Hands</td><td>Help us hold things</td></tr>
+<tr><td>Legs</td><td>Help us walk and run</td></tr>
+</table>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Name the body part we see with: <span class="answer-line"></span></li>
+    <li>Name the body part we hear with: <span class="answer-line"></span></li>
+    <li>Name the body part we smell with: <span class="answer-line"></span></li>
+    <li>Fill in the blank: We walk with our ____.</li>
+    <li>Draw a boy or girl and label at least 6 body parts.</li>
+    <li>Touch and name each body part on yourself as you say it aloud.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-4', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="evs-5" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">5</span><h3>Fruits and Vegetables</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Fruits usually grow on trees and are sweet to eat. Vegetables usually grow on plants or under the ground and are cooked before eating. Both fruits and vegetables are good for our health.</p>
+<p><strong>Fruits</strong> <span class="audio-hint">(tap to hear)</span></p>
+<div class="grid-3"><div class="pic-word" onclick="speak("Apple")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Apple"><span class="em">🍎</span><span class="wd">Apple</span></div><div class="pic-word" onclick="speak("Banana")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Banana"><span class="em">🍌</span><span class="wd">Banana</span></div><div class="pic-word" onclick="speak("Mango")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Mango"><span class="em">🥭</span><span class="wd">Mango</span></div><div class="pic-word" onclick="speak("Orange")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Orange"><span class="em">🍊</span><span class="wd">Orange</span></div><div class="pic-word" onclick="speak("Grapes")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Grapes"><span class="em">🍇</span><span class="wd">Grapes</span></div><div class="pic-word" onclick="speak("Papaya")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Papaya"><span class="em">🫐</span><span class="wd">Papaya</span></div></div>
+<p><strong>Vegetables</strong> <span class="audio-hint">(tap to hear)</span></p>
+<div class="grid-3"><div class="pic-word" onclick="speak("Potato")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Potato"><span class="em">🥔</span><span class="wd">Potato</span></div><div class="pic-word" onclick="speak("Tomato")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Tomato"><span class="em">🍅</span><span class="wd">Tomato</span></div><div class="pic-word" onclick="speak("Carrot")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Carrot"><span class="em">🥕</span><span class="wd">Carrot</span></div><div class="pic-word" onclick="speak("Brinjal")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Brinjal"><span class="em">🍆</span><span class="wd">Brinjal</span></div><div class="pic-word" onclick="speak("Onion")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Onion"><span class="em">🧅</span><span class="wd">Onion</span></div><div class="pic-word" onclick="speak("Cabbage")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Cabbage"><span class="em">🥬</span><span class="wd">Cabbage</span></div></div>
+
+      
+<span class="block-label label-example">Example</span>
+<p>Mango is called the "King of Fruits" and is sweet and juicy. Potato is a vegetable that grows under the ground.</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Name any three fruits: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Name any three vegetables: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Sort into two groups - Apple, Potato, Mango, Carrot, Banana, Onion.</li>
+    <li>Which is your favourite fruit? <span class="answer-line"></span></li>
+    <li>Draw and colour any two fruits and any two vegetables.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-5', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter " data-chapter-id="evs-6" data-section="evs">
+    <div class="chapter-head"><span class="chapter-num">6</span><h3>Flowers</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+<span class="block-label label-learn">Learn</span>
+<p>Flowers are the beautiful, colourful part of a plant. They have a pleasant smell and come in many colours and shapes.</p>
+<div class="grid-3"><div class="pic-word" onclick="speak("Rose")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Rose"><span class="em">🌹</span><span class="wd">Rose</span></div><div class="pic-word" onclick="speak("Lily")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Lily"><span class="em">🌸</span><span class="wd">Lily</span></div><div class="pic-word" onclick="speak("Sunflower")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Sunflower"><span class="em">🌻</span><span class="wd">Sunflower</span></div><div class="pic-word" onclick="speak("Marigold")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Marigold"><span class="em">🌼</span><span class="wd">Marigold</span></div><div class="pic-word" onclick="speak("Lotus")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Lotus"><span class="em">🪷</span><span class="wd">Lotus</span></div><div class="pic-word" onclick="speak("Jasmine")" title="Tap to hear it" tabindex="0" role="button" aria-label="Hear Jasmine"><span class="em">🤍</span><span class="wd">Jasmine</span></div></div>
+
+      
+<span class="block-label label-example">Example</span>
+<p>The <strong>rose</strong> has a sweet smell and is often red or pink. The <strong>sunflower</strong> is yellow and turns to face the sun. The <strong>lotus</strong> grows in water and is our national flower.</p>
+
+      
+<span class="block-label label-practice">Practice Set</span>
+<div class="practice-box">
+  <ol>
+    <li>Name any three flowers: <span class="answer-line"></span> <span class="answer-line"></span> <span class="answer-line"></span></li>
+    <li>Which flower is our national flower? <span class="answer-line"></span></li>
+    <li>Which flower turns towards the sun? <span class="answer-line"></span></li>
+    <li>Which is your favourite flower and why? <span class="answer-line"></span></li>
+    <li>Draw and colour any two flowers in your notebook.</li>
+  </ol>
+</div>
+
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('evs-6', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  </div>
+  <a class="top-link" href="#top">⬆ Back to top</a>
+</section>
+<div class="divider-wave"></div>
+
+<section id="rhymes" class="subject rhy-theme">
+  <div class="subject-head">
+    <span class="subject-badge">🎵</span>
+    <h2>Rhymes</h2>
+    <p>Half Yearly rhymes to sing, act out and enjoy.</p>
+  </div>
+  <div class="chapters">
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-1" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">1</span><h3>The ABC Song</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">A B C D E F G,
+H I J K L M N O P,
+Q R S,  T U V,
+W X, Y and Z.
+Now I know my A B C's,
+Next time won't you sing with me?</div>
+<button class="play-rhyme" onclick="speak("A B C D E F G, H I J K L M N O P, Q R S,  T U V, W X, Y and Z. Now I know my A B C's, Next time won't you sing with me?")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 Sing this while pointing to each letter on your alphabet chart.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "The ABC Song" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-1', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-2" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">2</span><h3>Bits of Paper</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">Bits of paper, bits of paper,
+Lying on the ground, lying on the ground,
+I will pick them up, I will pick them up,
+And I'll throw them in the bin, and I'll throw them in the bin.</div>
+<button class="play-rhyme" onclick="speak("Bits of paper, bits of paper, Lying on the ground, lying on the ground, I will pick them up, I will pick them up, And I'll throw them in the bin, and I'll throw them in the bin.")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 This rhyme teaches us to keep our surroundings clean and tidy.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "Bits of Paper" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-2', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-3" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">3</span><h3>Hop a Little</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">Hop a little, jump a little,
+One, two, three.
+Run a little, skip a little,
+Tap one knee.
+Bend a little, stretch a little,
+Nod your head.
+Sit down quietly, fold your hands,
+Not a word is said.</div>
+<button class="play-rhyme" onclick="speak("Hop a little, jump a little, One, two, three. Run a little, skip a little, Tap one knee. Bend a little, stretch a little, Nod your head. Sit down quietly, fold your hands, Not a word is said.")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 Act out each action - hop, jump, run, skip - as you say the words.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "Hop a Little" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-3', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-4" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">4</span><h3>I Am a Little Teapot</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">I'm a little teapot, short and stout,
+Here is my handle, here is my spout.
+When I get all steamed up, hear me shout,
+Tip me over and pour me out!</div>
+<button class="play-rhyme" onclick="speak("I'm a little teapot, short and stout, Here is my handle, here is my spout. When I get all steamed up, hear me shout, Tip me over and pour me out!")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 Put one hand on your hip for the handle and stretch out the other arm for the spout.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "I Am a Little Teapot" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-4', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-5" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">5</span><h3>After a Bath</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">After my bath I try, try, try
+To wipe myself till I'm dry, dry, dry.
+Hands to wipe, and fingers and toes,
+And two wet legs, and a shiny nose.
+Just think how much less time it would take
+If I were a dog and could shake, shake, shake!</div>
+<button class="play-rhyme" onclick="speak("After my bath I try, try, try To wipe myself till I'm dry, dry, dry. Hands to wipe, and fingers and toes, And two wet legs, and a shiny nose. Just think how much less time it would take If I were a dog and could shake, shake, shake!")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 This rhyme reminds us about good habits like drying up after a bath.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "After a Bath" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-5', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-6" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">6</span><h3>Are You Sleeping?</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">Are you sleeping, are you sleeping,
+Brother John, Brother John?
+Morning bells are ringing, morning bells are ringing,
+Ding, dang, dong. Ding, dang, dong.</div>
+<button class="play-rhyme" onclick="speak("Are you sleeping, are you sleeping, Brother John, Brother John? Morning bells are ringing, morning bells are ringing, Ding, dang, dong. Ding, dang, dong.")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 A gentle wake-up rhyme, often sung as a round in groups.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "Are You Sleeping?" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-6', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-7" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">7</span><h3>Ding Dong Bell</h3><span class="star-badge">⭐</span></div>
+    <div class="chapter-body">
+      
+      
+<span class="block-label label-example">Rhyme</span>
+<div class="rhyme-text">Ding dong bell,
+Pussy's in the well.
+Who put her in?
+Little Johnny Green.
+Who pulled her out?
+Little Tommy Stout.
+What a naughty boy was that,
+To try to drown poor pussy cat,
+Who never did him any harm,
+And killed the mice in his father's barn.</div>
+<button class="play-rhyme" onclick="speak("Ding dong bell, Pussy's in the well. Who put her in? Little Johnny Green. Who pulled her out? Little Tommy Stout. What a naughty boy was that, To try to drown poor pussy cat, Who never did him any harm, And killed the mice in his father's barn.")">▶️ Read Rhyme Aloud</button>
+<div class="tip">🎈 This old rhyme teaches that we should never be unkind to animals.</div>
+<span class="block-label label-practice">Practice</span>
+<div class="practice-box">
+  <ol>
+    <li>Recite "Ding Dong Bell" from memory, with actions, in front of your family.</li>
+    <li>Draw a picture that shows what this rhyme is about.</li>
+  </ol>
+</div>
+
+      
+    </div>
+    <div class="chapter-footer">
+      <button class="done-btn" onclick="toggleDone('rhy-7', this)">⭐ Mark as Complete</button>
+    </div>
+  </article>
+
+  <article class="chapter rhyme-card" data-chapter-id="rhy-8" data-section="rhymes">
+    <div class="chapter-head"><span class="chapter-num">8</span><h3>Pat-a-Ca
